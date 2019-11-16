@@ -4,9 +4,9 @@
 
 from datetime import datetime, timedelta
 
-tamanhoDoArquivo = float(input("Qual o tamanho do arquivo em MB?"))
+fileSize = float(input("Qual o tamanho do arquivo em MB?"))
 linkSpeed = float(input("Qual a velocidade do lixo da sua internet MBps?"))
-totalTime = timedelta(seconds=int(tamanhoDoArquivo / linkSpeed))
+totalTime = timedelta(seconds=int(fileSize / linkSpeed))
 d = datetime(1, 1, 1) + totalTime
 print("Vai levar %d minutos e %d segundos para concluir o download" %
       (d.minute, d.second))
